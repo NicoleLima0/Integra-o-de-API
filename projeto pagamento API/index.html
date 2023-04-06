@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dados do Pagamento</title>
+  </head>
+
+  <body>
+    <div class="checkout-panel">
+      <div class="panel-body">
+        <h2 class="title">Pagamento de tarifas</h2>
+        <div class="progress-bar">
+          <div class="step active"></div>
+          <div class="step"></div>
+          <div class="step"></div>
+          <div class="step"></div>
+        </div>
+        <section class="pagamento">
+          <div class="form-pagamento">
+            <form method="post">
+              <label> Dados da solicitação do pagamento </label>
+              <div class="form-100">
+                <input
+                  type="text"
+                  maxlength="36"
+                  class="form-02"
+                  placeholder="Nome"
+                />
+              </div>
+              <div class="form-100">
+                <input type="text" class="form-01" placeholder="Descrição" />
+              </div>
+              <div class="form-50">
+                <input type="number" max="13.2" placeholder="R$ Serviço" />
+                <input type="number" max="13.2" placeholder="R$ Tarifa" />
+              </div>
+              <div class="form-100">
+                <input type="text" placeholder="Data de vencimento" />
+              </div>
+              <label>Formas de pagamento</label>
+              <div class="select-pagamento">
+                <select class="select" aria-placeholder="Selecione">
+                  <option aria-placeholder="Selecione" selected></option>
+                  <option value="1">Cartão de crédito</option>
+                  <option value="2">Cartão de débito</option>
+                  <option value="3">Pix</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="panel-footer">
+            <button class="btn back-btn">Voltar</button>
+            <button class="btn next-btn">Próximo passo</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,256 @@
+/* * {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+} */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size-adjust: u;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: #eeeeee;
+  justify-content: center;
+  align-items: center;
+}
+section.pagamento {
+  display: flex;
+  max-width: 960px;
+  padding: 0 2%;
+  margin: 90px auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.checkout-panel {
+  display: flex;
+  flex-direction: column;
+  width: 940px;
+  height: 766px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+.panel-body {
+  padding: 45px 80px 0;
+  flex: 1;
+}
+
+.title {
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: #2e2e2e;
+}
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px;
+  width: 60%;
+}
+
+.step {
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin-bottom: 30px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  background-color: #efefef;
+}
+
+.step:after {
+  position: absolute;
+  z-index: -1;
+  top: 5px;
+  left: 22px;
+  width: 225px;
+  height: 6px;
+  content: "";
+  background-color: #efefef;
+}
+
+.step:before {
+  color: #2e2e2e;
+  position: absolute;
+  top: 40px;
+}
+
+.step:last-child:after {
+  content: none;
+}
+
+.step.active {
+  background-color: rgb(0, 116, 212);
+}
+.step.active:after {
+  background-color: rgb(0, 116, 212);
+}
+.step.active:before {
+  color: rgb(0, 116, 212);
+}
+.step.active + .step {
+  background-color: rgb(0, 116, 212);
+}
+.step.active + .step:before {
+  color: rgb(0, 116, 212);
+}
+
+.step:nth-child(1):before {
+  content: "Tarifa";
+}
+.step:nth-child(2):before {
+  right: -40px;
+  content: "Dados do pagamento";
+}
+.step:nth-child(3):before {
+  right: -30px;
+  content: "Pagamento";
+}
+.step:nth-child(4):before {
+  right: 0;
+  content: "Finalizar";
+}
+
+.descricao-pagamento {
+  width: 40%;
+}
+.descricao-pagamento h3 {
+  color: rgb(140, 140, 140);
+}
+.form-pagamento {
+  width: 70%;
+  padding: 30px 30px 20px 30px;
+  -webkit-box-shadow: -8px 5px 15px 5px #c7c7c7;
+  margin-bottom: 28px;
+  margin-top: -23px;
+  border-radius: 10px;
+}
+.form-pagamento form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-100 {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.form-50 {
+  width: 100%;
+  display: flex;
+}
+.form-pagamento form {
+  display: block;
+}
+.form-01 {
+  display: block;
+  /* background-image: url("https://designmodo.com/demo/checkout-panel/img/visa_logo.png"),
+    url("https://designmodo.com/demo/checkout-panel/img/mastercard_logo.png");
+  background-repeat: no-repeat;
+  background-size: 2.0em;
+  padding-left: 1.3em;
+  background-position: right 7px, right 20px;
+ background-position: c; */
+}
+.form-02 {
+  display: block;
+}
+.form-pagamento label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #817d7d;
+  margin-top: 7px;
+}
+.form-pagamento input[type="text"] {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  margin: 4px;
+}
+.form-pagamento input[type="number"] {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  margin-left: 3px;
+  margin-right: -3px;
+  margin-bottom: 7px;
+}
+.select {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  margin: 4px;
+  /* -webkit-appearance: none; */
+}
+
+/* .form-pagamento input[type="submit"] {
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  background-color: rgb(0, 116, 212);
+  color: #fff;
+  left: 4px;
+  position: relative;
+  border: 0;
+} */
+
+@media screen and (max-width: 768) {
+  .descricao-pagamento,
+  .form-pagamento {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+.panel-footer {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  padding: 0 80px;
+  background-color: rgb(239, 239, 239);
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+.btn {
+  font-size: 16px;
+  width: 163px;
+  height: 48px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 23px;
+}
+
+.back-btn {
+  color: rgb(0, 116, 212);
+  background: #fff;
+}
+
+.next-btn {
+  color: #fff;
+  background: rgb(0, 116, 212);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+.blue-border {
+  border: 1px solid rgb(110, 178, 251);
+}
+.warning {
+  border-color: rgb(0, 116, 212);
+}
