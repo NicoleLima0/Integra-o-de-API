@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
     <title>Dados do Pagamento</title>
+    
   </head>
 
   <body>
@@ -28,32 +30,35 @@
                   maxlength="36"
                   class="form-02"
                   placeholder="Nome"
+                  id="nome"
                 />
               </div>
               <div class="form-100">
-                <input type="text" class="form-01" placeholder="Descrição" />
+                <input type="text" class="form-01" placeholder="Descrição"
+                id="descricao" />
+                
               </div>
               <div class="form-50">
-                <input type="number" max="13.2" placeholder="R$ Serviço" />
-                <input type="number" max="13.2" placeholder="R$ Tarifa" />
+                <input type="number" max="13.2" placeholder="R$ Serviço" id="servico" />
+                <input type="number" max="13.2" placeholder="R$ Tarifa" id="tarifa" />
               </div>
               <div class="form-100">
-                <input type="text" placeholder="Data de vencimento" />
+                <input type="date" placeholder="Data de vencimento" id="dt_vencimento" />
               </div>
               <label>Formas de pagamento</label>
               <div class="select-pagamento">
-                <select class="select" aria-placeholder="Selecione">
+                <select id="forma_pagamento" class="select" aria-placeholder="Selecione">
                   <option aria-placeholder="Selecione" selected></option>
-                  <option value="1">Cartão de crédito</option>
-                  <option value="2">Cartão de débito</option>
-                  <option value="3">Pix</option>
+                  <option value="CARTAO_CREDITO">Cartão de crédito</option>
+                  <option value="CARTAO_DEBITO">Cartão de débito</option>
+                  <option value="PIX">Pix</option>
                 </select>
               </div>
             </form>
           </div>
           <div class="panel-footer">
             <button class="btn back-btn">Voltar</button>
-            <button class="btn next-btn">Próximo passo</button>
+            <button onclick="validar()" class="btn next-btn">Próximo passo</button>
           </div>
         </section>
       </div>
