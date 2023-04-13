@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="api.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1> API cotação</h1>
+  <select id="cotacaomoeda">
+    <option value="EUR-BRL"> Euro </option>
+    <option value="USD-BRL"> Dólar</option>
+  </select>
+  <p id="date">
+    Data: <span id="thisdate"></span>
+  </p>  
+
+  <p id="value">
+    Valor máximo: <span id="maxvalue"></span> <br>
+    Valor mínimo: <span id="minvalue"></span>
+  </p>
+  <button onclick="verificar()"> Verificar </button>
+</body>
+</html>
