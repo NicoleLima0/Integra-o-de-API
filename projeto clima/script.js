@@ -1,5 +1,4 @@
 const apiKey = "230734b56e88958b69b5cdb56e9251fa";
-const apiUnsplash = "https://source.unsplash.com/1600x900/?";
 const cityInput = document.querySelector("#city-input");
 const searchBtn = document.querySelector("#search");
 const cidade = document.querySelector("#city");
@@ -36,10 +35,6 @@ const clima = async (city) => {
   vento.innerText = `${dados.wind.speed}km/h`;
   icon.setAttribute("src", iconURL);
   containerclima.classList.remove("hide");
-
-  document.body.style.backgroundImage = `url("${
-    apiUnsplash + dados.weather[0].description
-  }")`;
 };
 
 searchBtn.addEventListener("click", (e) => {
